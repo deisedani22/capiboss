@@ -1,0 +1,131 @@
+body {
+    font-family:  'Fredoka';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    /* Cor de fundo clara */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    /* Largura máxima para a tela */
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente a imagem e a área de seleção */
+    justify-content: center;
+    gap: 100px;
+    /* Espaço entre a imagem e a área de seleção */
+}
+
+/* Estilo para a imagem do mascote (ajuste o tamanho conforme necessário) */
+.mascote-img {
+    width: 250px;
+    height: auto;
+    /* Para a imagem original, o fundo deve ser transparente */
+}
+
+/* Área de seleção: "Vamos começar?" e os botões */
+.selection-area {
+    text-align: center;
+}
+
+.selection-area h1 {
+    color: #292e75;
+    font-size: 2.2em;
+    margin-bottom: 50px;
+}
+
+.buttons-group {
+    display: flex;
+    gap: 30px;
+    /* Espaço entre os dois cartões de botão */
+}
+
+/* Estilo para os cartões de botão */
+.button-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px 40px;
+    width: 150px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e0e0e0;
+}
+
+.button-card:hover {
+    transform: translateY(-5px);
+    /* Efeito sutil de elevação ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-container {
+    font-size: 3em;
+    /* Tamanho dos ícones (simulando a imagem) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px; /* 10% maior que 120px */
+    height: 132px; /* 10% maior que 120px */
+    border-radius: 50%;
+    /* Fundo redondo, se necessário */
+
+    margin-bottom: 10px;
+}
+
+/* Ajuste para imagens dentro do container de ícone (10% maior) */
+.icon-container img {
+    width: 80%;
+    max-width: 106px; /* ~10% maior que 96px */
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.icon-container.hands {
+    color: #ffd700;
+    /* Cor amarela para as mãos */
+}
+
+.label {
+    font-weight: bold;
+    color: #2e008b;
+    /* Cor de texto azul escuro/roxo */
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+/* Responsividade básica para telas menores */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .mascote-img {
+        width: 180px;
+    }
+
+    .buttons-group {
+        flex-direction: column;
+    }
+
+    .button-card {
+        width: 100%;
+        /* Cartões ocupam a largura total em telas pequenas */
+        height: auto;
+    }
+}

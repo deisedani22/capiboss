@@ -1,0 +1,997 @@
+/* ===================== RESET E VARIÁVEIS ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #292e75;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+:root {
+  --white: #ffffff;
+  --yellow: #f3be4b;
+  --blue-1: #3996b8;
+  --blue-2: #292e75;
+  --blue-3: #285987;
+  --blue-4: #95c4e6;
+  --yellow-2: #9e7a15;
+  --yellow-3: #fcefd2;
+}
+
+/* ===================== CABEÇALHO ===================== */
+.header {
+  width: 100%;
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--blue-2);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--yellow);
+}
+
+.login-btn {
+  background: var(--yellow);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  color: var(--blue-2);
+}
+
+/* Efeito hover */
+.login-btn:hover {
+    background-color: #9e7a15;     /* versão mais escura do amarelo */
+    color: white !important;        /* texto ficará branco no hover */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--blue-2);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* ===================== HERO ===================== */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--blue-1);
+  color: var(--white);
+  padding: 8rem 5% 5rem;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 900px;
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.hero-content h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+highlight{
+
+}
+
+.education-icons {
+  display: flex;
+  align-items: left;
+  gap: 2.5rem;
+  /* deixa mais equilibrado */
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  justify-content: left;
+  margin-bottom: 2.5rem;
+}
+
+.icon-block {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.icon-block img {
+  width: 100px;
+  height: 100px;
+   object-fit: contain;
+}
+
+
+.icon-label {
+  font-size: 1rem;
+  color: #ffffff;
+  
+}
+
+/* Símbolos + e = */
+.symbol {
+    font-size: 2.4rem;          /* Maior, visível e proporcional aos ícones */
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;        /* Centraliza verticalmente com os ícones */
+    justify-content: center;
+}
+
+
+.hero-image img {
+  height: auto;
+  object-fit: contain;
+  max-width: 380px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cta-button {
+  background-color: var(--yellow);
+  color: var(--blue-2);
+  font-family: 'Fredoka One', 'cursive';
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  /* aumenta espaço do botão */
+  transition: all 0.3s ease;
+
+}
+
+.cta-button:hover {
+  background-color: var(--yellow-2);
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+.gold {
+  background-color: var(--yellow);
+}
+
+/* ===================== SEÇÕES ===================== */
+section {
+  padding: 5rem 8%;
+}
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--blue-2);
+}
+
+/* ===================== NOSSAS SOLUÇÕES ===================== */
+.solutions-section {
+  background-color: var(--white);
+  padding: 6rem 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  color: var(--blue-2);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.solution-main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+/* Mascote */
+.solution-mascot-container {
+  flex: 1;
+  text-align: center;
+}
+
+.mascot-image {
+  width: 300px;
+  max-width: 100%;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Conteúdo textual e cards */
+.solution-info-container {
+  flex: 2;
+  text-align: left;
+  color: var(--blue-2);
+}
+
+.solution-description-1 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--blue-2);
+}
+
+.solution-cards {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.solution-card {
+  background: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 1.5rem;
+  flex: 1;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon-placeholder img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  color: var(--blue-2);
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+/* Segunda descrição */
+.solution-description-2 {
+  font-size: 1.05rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: var(--blue-2);
+}
+
+/* Botão CTA */
+.solution-cta-button {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--yellow);
+  color: var(--blue-2);
+  font-family: 'Fredoka One', cursive;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.solution-cta-button:hover {
+  background-color: var(--yellow-2);
+  color: var(--white);
+}
+
+.session-aviso {
+  margin-top: 2rem;
+  padding: 1rem;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.textoaviso {
+  background-color: teal;
+  padding: 1rem;
+  color: #ffffff;
+}
+
+.solution-info-container .cta-button {
+    display: block;
+    margin: 2rem auto 0; /* centraliza horizontalmente e cria espaçamento */
+    width: fit-content; /* mantém tamanho original do botão */
+    
+}
+
+
+/* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 992px) {
+  .solution-main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .solution-info-container {
+    text-align: center;
+  }
+
+  .solution-cards {
+    justify-content: center;
+  }
+
+  
+}
+
+
+
+
+/* ===================== TRILHAS ===================== */
+.trilhas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.trilha-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 250px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.trilha-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.trilha-card h4 {
+  margin: 1rem 0 0.3rem;
+  color: var(--blue-2);
+}
+
+.ver-mais-btn {
+  background-color: var(--blue-4);
+  color: var(--blue-2);
+  border: none;
+  width: 100%;
+  padding: 0.7rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.ver-mais-btn:hover {
+  background-color: var(--blue-3);
+  color: var(--white);
+}
+
+.trilhas-text {
+  text-align: center;
+  margin: 3rem 0 1rem;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrapper iframe {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 15px;
+}
+
+/* ===================== PLANOS ===================== */
+.plans-section {
+  background-color: var(--white);
+  padding: 6rem 8%;
+  text-align: center;
+}
+
+.plans-description {
+  font-size: 1.1rem;
+  color: var(--blue-2);
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: 3rem;
+}
+
+.planos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.plano-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px;
+}
+
+.plano-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.plano-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+.plano-title {
+  font-family: 'Fredoka One', cursive;
+  color: var(--blue-2);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.plano-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button.small {
+  padding: 0.8rem 1.8rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-family: 'Fredoka One', cursive;
+  background-color: var(--yellow);
+  color: var(--blue-2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button.small:hover {
+  background-color: var(--yellow-2);
+  color: var(--white);
+}
+
+
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .plans-description {
+    padding: 0 1rem;
+  }
+
+  .plano-card {
+    max-width: 100%;
+  }
+}
+
+
+/* ===================== CADASTRO ===================== */
+.cadastro-section {
+  background-color: var(--white);
+  padding: 5rem 8%;
+  text-align: center;
+}
+
+.cadastro-section h2 {
+  color: var(--blue-2);
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* FORM PRINCIPAL */
+#cadastroForm {
+  max-width: 850px;
+  margin: 0 auto;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+label {
+  font-size: 0.95rem;
+  color: var(--blue-2);
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  padding: 0.9rem 1rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--blue-1);
+}
+
+/* GRUPO DE RADIOS */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--blue-2);
+}
+
+.radio-group input {
+  margin-right: 0.5rem;
+}
+
+/* BOTÃO DE CADASTRAR */
+.cadastro-btn {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--yellow);
+  color: var(--blue-2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cadastro-btn:hover {
+  background-color: var(--yellow-2);
+  color: var(--white);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================== SOBRE NÓS ===================== */
+.about-section {
+  background-color: #3996b8;
+  /* Azul institucional */
+  color: #ffffff;
+  padding: 5rem 8%;
+  text-align: left;
+}
+
+/* Container principal */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Mascote circular à esquerda */
+.about-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Conteúdo textual à direita */
+.about-content {
+  max-width: 600px;
+}
+
+.section-title {
+  font-family: "Fredoka One", cursive;
+  font-size: 2.2rem;
+  color: #292e75;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: "Fredoka One", cursive;
+  color: #292e75;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.about-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #292e75;
+}
+
+/* ===================== PARCEIROS ===================== */
+.partners-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.partners-title {
+  font-family: "Fredoka One", cursive;
+  color: #292e75;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.partners-logos img {
+  height: 45px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.partners-logos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 180px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 180px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* ===================== CONTATO ===================== */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-icons img {
+  width: 40px;
+  transition: 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* ===================== LOGIN ===================== */
+.login-section {
+  background-color: var(--blue-1);
+  color: var(--white);
+  text-align: center;
+  padding: 5rem 1rem 4rem;
+}
+
+.login-section .section-title {
+  font-family: "Fredoka One", cursive;
+  font-size: 1.8rem;
+  color: var(--blue-2);
+  margin-bottom: 2rem;
+}
+
+.login-section form {
+  max-width: 380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Inputs */
+.login-section input {
+  padding: 1rem 1.2rem;
+  border-radius: 40px;
+  border: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  outline: none;
+  color: var(--blue-2);
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.login-section input::placeholder {
+  color: var(--blue-2);
+  opacity: 0.8;
+}
+
+.login-section input:focus {
+  box-shadow: 0 0 0 3px var(--yellow);
+  transform: scale(1.02);
+}
+
+/* Botões e Links com aparência de botão */
+.btn-login {
+  display: inline-block;
+  text-decoration: none;
+  /* remove o sublinhado */
+  text-align: center;
+  border: none;
+  border-radius: 40px;
+  font-family: "Fredoka One", cursive;
+  font-size: 1.1rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Botão "Entrar" */
+.btn-login.primary {
+  background-color: var(--yellow);
+  color: var(--blue-2);
+}
+
+.btn-login.primary:hover {
+  background-color: var(--yellow-2);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Botão "Cadastrar-se" */
+.btn-login.secondary {
+  background-color: var(--blue-2);
+  color: #ffffff;
+  text-decoration: none;
+  /* remove a barra no link */
+}
+
+.btn-login.secondary:hover {
+  background-color: #1f245d;
+  transform: scale(1.05);
+}
+
+
+
+/* ===================== RODAPÉ ===================== */
+.footer {
+  background-color: var(--blue-2);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-socials a {
+  color: var(--blue-4);
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 600px) {
+  .login-section {
+    padding: 4rem 1rem;
+  }
+
+  .login-section .section-title {
+    font-size: 1.5rem;
+  }
+
+  .btn-login {
+    font-size: 1rem;
+  }
+}
+
+/* ===================== MODAL ===================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background: var(--white);
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--blue-2);
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: var(--white);
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-content,
+  .hero-image {
+    max-width: 100%;
+  }
+}
