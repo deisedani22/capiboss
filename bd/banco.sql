@@ -86,89 +86,48 @@ CREATE TABLE Progresso (
 -- Composicao das seeds, 8 trilhas, 2 aulas por trilha, 2 lições por aula, 1 missão por aula
 
 
+
 -- Dados iniciais para Trilhas
+
 INSERT INTO Trilhas (titulo, descricao, nivel_dificuldade, recompensa_capimoedas) VALUES
-('Trilha de Matemática', 'Aprenda os conceitos básicos de matemática.', 'fundamental', 100),
-('Trilha de Ciências', 'Explore o mundo das ciências naturais.', 'fundamental', 100),
-('Trilha de História', 'Descubra os eventos históricos mais importantes.', 'medio', 150),
-('Trilha de Geografia', 'Conheça os aspectos físicos e humanos do planeta.', 'medio', 150),
-('Trilha de Português', 'Aprimore suas habilidades na língua portuguesa.', 'fundamental', 100),
-('Trilha de Inglês', 'Inicie sua jornada no aprendizado do inglês.', 'fundamental', 100),
-('Trilha de Artes', 'Desenvolva sua criatividade através das artes.', 'infantil', 80),
-('Trilha de Educação Física', 'Mantenha-se ativo e saudável com exercícios físicos.', 'infantil', 80);
+('Dinheiro tem valor', 'Aprenda os conceitos fundamentais sobre o valor do dinheiro, sua história e importância na sociedade moderna.', 'infantil', 100), 
+('Investigando hábitos de consumo', 'Desenvolva uma compreensão profunda sobre hábitos de consumo e como fazer escolhas conscientes.', 'infantil', 100), 
+('Guardando com Proposito', 'Descubra a importância de poupar dinheiro com objetivos claros e como criar um plano de poupança eficaz.', 'infantil', 100), 
+('Dinheiro não dá em Árvores', 'Entenda que o dinheiro vem do trabalho e esforço, explorando diferentes formas de ganhar e valorizar o dinheiro.', 'infantil', 100), 
+('Compartilhar e cuidar', 'Ajude a Tartaruga-de-Pente Visionária, você vai descobrir que sonhos importantes podem virar metas quando a gente planeja, guarda um pouquinho e espera com paciência.', 'infantil', 100), 
+('Projetando o futuro', 'Você vai descobrir que as emoções influenciam nossas escolhas e que pensar antes de gastar ajuda a cuidar do dinheiro, das pessoas e do planeta', 'infantil', 100), 
+('Usando dinheiro com sabedoria', 'Descubra que é possível gastar, guardar e compartilhar sem ficar sem o que é essencial.', 'infantil', 100);
+
+
 
 -- Dados iniciais para Aulas
+
 INSERT INTO Aulas (trilha_id, titulo) VALUES
-(1, 'Números e Operações'),
-(1, 'Geometria Básica'),
-(2, 'Seres Vivos'),
-(2, 'Corpo Humano'),
-(3, 'Antiguidade'),
-(3, 'Idade Média'),
-(4, 'Relevo Terrestre'),
-(4, 'Climas do Mundo'),
-(5, 'Gramática Básica'),
-(5, 'Literatura Infantil'),
-(6, 'Vocabulário Básico'),
-(6, 'Frases Comuns'),
-(7, 'Desenho e Pintura'),
-(7, 'Música e Ritmo'),
-(8, 'Exercícios ao Ar Livre'),
-(8, 'Jogos e Brincadeiras');
+(1, 'Dinheiro tem valor ?'),
+(1, 'História do dinheiro'),
+(2, 'Desejo x Necessidade'),
+(2, 'Publicidade e Consumo'),
+(3, 'Por que poupar ?'),
+(3, 'Como criar um cofrinho'),
+(4, 'De onde vem o dinheiro ?'),
+(4, 'Trabalho e renda'),
+(5, 'Compartilhar é cuidar'),
+(5, 'Metas de compartilhamento'),
+(6, 'Emoções e dinheiro'),
+(6, 'Planejamento financeiro'),
+(7, 'Gastar com sabedoria'),
+(7, 'Equilíbrio financeiro');
+
+
 
 -- Dados iniciais para Lições
-INSERT INTO Licoes (aula_id, titulo, conteudo, video_url, arquivo) VALUES
-(1, 'Adição e Subtração', 'Conteúdo sobre adição e subtração.', 'https://example.com/video1', 'adicao_subtracao.pdf'),
-(1, 'Multiplicação e Divisão', 'Conteúdo sobre multiplicação e divisão.', 'https://example.com/video2', 'multiplicacao_divisao.pdf'),
-(2, 'Formas Geométricas', 'Conteúdo sobre formas geométricas.', 'https://example.com/video3', 'formas_geometricas.pdf'),
-(2, 'Perímetros e Áreas', 'Conteúdo sobre perímetros e áreas.', 'https://example.com/video4', 'perimetros_areas.pdf'),
-(3, 'Classificação dos Seres Vivos', 'Conteúdo sobre classificação dos seres vivos.', 'https://example.com/video5', 'classificacao_seres_vivos.pdf'),
-(3, 'Ecossistemas', 'Conteúdo sobre ecossistemas.', 'https://example.com/video6', 'ecossistemas.pdf'),
-(4, 'Sistema Digestório', 'Conteúdo sobre o sistema digestório.', 'https://example.com/video7', 'sistema_digestorio.pdf'),
-(4, 'Sistema Respiratório', 'Conteúdo sobre o sistema respiratório.', 'https://example.com/video8', 'sistema_respiratorio.pdf'),
-(5, 'Civilizações Antigas', 'Conteúdo sobre civilizações antigas.', 'https://example.com/video9', 'civilizacoes_antigas.pdf'),
-(5, 'Impérios e Reinos', 'Conteúdo sobre impérios e reinos.', 'https://example.com/video10', 'imperios_reinos.pdf'),
-(6, 'Feudalismo', 'Conteúdo sobre feudalismo.', 'https://example.com/video11', 'feudalismo.pdf'),
-(6, 'Renascimento',  'Conteúdo sobre renascimento.', 'https://example.com/video12', 'renascimento.pdf'),
-(7, 'Relevo e Formações Terrestres',  'Conteúdo sobre relevo e formações terrestres.',  'https://example.com/video13',  'relevo_formacoes_terrestres.pdf'),
-(7,  'Hidrografia Mundial',  'Conteúdo sobre hidrografia mundial.',  'https://example.com/video14',  'hidrografia_mundial.pdf'),
-(8,  'Gramática e Sintaxe',  'Conteúdo sobre gramática e sintaxe.',  'https://example.com/video15',  'gramatica_sintaxe.pdf'),
-(8,  'Contos e Fábulas',  'Conteúdo sobre contos e fábulas.',  'https://example.com/video16',  'contos_fabulas.pdf'),
-(9,  'Vocabulário Básico em Inglês',  'Conteúdo sobre vocabulário básico em inglês.',  'https://example.com/video17',  'vocabulario_basico_ingles.pdf'),
-(9,  'Frases Comuns em Inglês',  'Conteúdo sobre frases comuns em inglês.',  'https://example.com/video18',  'frases_comuns_ingles.pdf'),
-(10,  'Técnicas de Desenho',  'Conteúdo sobre técnicas de desenho.',  'https://example.com/video19',  'tecnicas_desenho.pdf'),
-(10,  'Teoria das Cores',  'Conteúdo sobre teoria das cores.',  'https://example.com/video20',  'teoria_cores.pdf'),
-(11,  'Exercícios Físicos para Crianças',  'Conteúdo sobre exercícios físicos para crianças.',  'https://example.com/video21',  'exercicios_fisicos_criancas.pdf'),
-(11,  'Brincadeiras ao Ar Livre',  'Conteúdo sobre brincadeiras ao ar livre.',  'https://example.com/video22',  'brincadeiras_ar_livre.pdf'),
-(12,  'Brincadeiras Saudáveis',  'Conteúdo sobre brincadeiras saudáveis.',  'https://example.com/video23',  'brincadeiras_saudaveis.pdf'),
-(12,  'Jogos Cooperativos',  'Conteúdo sobre jogos cooperativos.',  'https://example.com/video24',  'jogos_cooperativos.pdf'),
-(13,  'Introdução à Música',  'Conteúdo sobre introdução à música.',  'https://example.com/video25',  'introducao_musica.pdf'),
-(13,  'Ritmo e Melodia',  'Conteúdo sobre ritmo e melodia.',  'https://example.com/video26',  'ritmo_melodia.pdf'),
-(14,  'Pintura com Aquarela',  'Conteúdo sobre pintura com aquarela.',  'https://example.com/video27',  'pintura_aquarela.pdf'),
-(14,  'Escultura com Argila',  'Conteúdo sobre escultura com argila.',  'https://example.com/video28',  'escultura_argila.pdf'),
-(15,  'Alongamentos e Aquecimentos',  'Conteúdo sobre alongamentos e aquecimentos.',  'https://example.com/video29',  'alongamentos_aquecimentos.pdf'),
-(15,  'Jogos de Coordenação Motora',  'Conteúdo sobre jogos de coordenação motora.',  'https://example.com/video30',  'jogos_coordenacao_motora.pdf'),
-(16,  'Atividades em Grupo',  'Conteúdo sobre atividades em grupo.',  'https://example.com/video31',  'atividades_grupo.pdf'),
-(16,  'Importância do Exercício Físico',  'Conteúdo sobre a importância do exercício físico.',  'https://example.com/video32',  'importancia_exercicio_fisico.pdf');
 
--- Dados iniciais para Missões
+INSERT INTO Licoes (aula_id, titulo, conteudo, video_url) VALUES
+(1, 'roda de conversa', '', 'https://www.youtube.com/watch?v=pTGyVpDSVDo'),
+(2, 'momento capiboss', '', 'https://www.youtube.com/watch?v=pTGyVpDSVDo');
+
+
+-- Dados iniciais para missões
 INSERT INTO Missoes (aula_id, titulo, jogo_url, recompensa_capimoedas) VALUES
-(1, 'Desafio da Matemática', 'https://example.com/jogo_math', 50),
-(2, 'Caça ao Tesouro Geométrico', 'https://example.com/jogo_geo', 50),
-(3, 'Quiz dos Seres Vivos', 'https://example.com/jogo_bio', 50),
-(4, 'Aventura no Corpo Humano', 'https://example.com/jogo_corpo', 50),
-(5, 'Viagem pela Antiguidade', 'https://example.com/jogo_historia1', 75),
-(6, 'Missão Idade Média', 'https://example.com/jogo_historia2', 75),
-(7, 'Explorando o Relevo', 'https://example.com/jogo_geografia1', 75),
-(8, 'Climas do Mundo em Ação', 'https://example.com/jogo_geografia2', 75),
-(9, 'Desafio Gramatical', 'https://example.com/jogo_portugues1', 50),
-(10, 'Literatura em Jogo', 'https://example.com/jogo_portugues2', 50),
-(11, 'Vocabulário em Ação', 'https://example.com/jogo_ingles1', 50),
-(12, 'Frases em Movimento', 'https://example.com/jogo_ingles2', 50),
-(13, 'Desafio Artístico', 'https://example.com/jogo_artes1', 40),
-(14, 'Música e Ritmo em Jogo', 'https://example.com/jogo_artes2', 40),
-(15, 'Exercícios Divertidos', 'https://example.com/jogo_educacao1', 40),
-(16, 'Brincadeiras Saudáveis', 'https://example.com/jogo_educacao2', 40);
-
-
-
+(1, 'Baú de surpresas', 'https://capnoss-fase-01.netlify.app/', 50),
+(2, 'Supermercado','https://capiboss-supermarket-game.vercel.app/game', 50);
